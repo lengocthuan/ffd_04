@@ -14,9 +14,9 @@ class Order extends Model
         'total',
     ];
 
-    public function detailOrders() 
+    public function products() 
     {
-        return $this->hasMany(DetailOrder::Class);
+        return $this->belongsToMany(Product::Class);
     }
 
     public function user() 

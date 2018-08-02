@@ -19,9 +19,9 @@ class Product extends Model
         return $this->hasMany(Review::Class);
     }
 
-    public function detailOrders() 
+    public function orders() 
     {
-        return $this->hasMany(DetailOrder::Class);
+        return $this->belongsToMany(Order::Class);
     }
 
     public function images() 
